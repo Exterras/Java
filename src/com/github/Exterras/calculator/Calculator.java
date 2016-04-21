@@ -12,22 +12,22 @@ public class Calculator {
 	}
 			
 	void add(int a, int b){
-//		System.out.println("������ �� ���� �Է��ϼ���.");
+//		System.out.println("덧셈을 할 두 수를 입력하세요.");
 		System.out.println(a+b);
 	}
 	
 	void minus(int a, int b){
-//		System.out.println("������ �� ���� �Է��ϼ���.");
+//		System.out.println("뺄셈을 할 두 수를 입력하세요.");
 		System.out.println(a-b);
 	}
 	
 	void multi(int a, int b){
-//		System.out.println("������ �� ���� �Է��ϼ���.");
+//		System.out.println("곱셈을 할 두 수를 입력하세요.");
 		System.out.println(a*b);
 	}
 	
 	void play(){
-		System.out.println("������ �� ���� �Է��ϼ���.");
+		System.out.println("덧셈을 할 두 수를 입력하세요.");
 		Scanner s = new Scanner(System.in);
 		a = s.nextInt();
 		b = s.nextInt();
