@@ -1,2 +1,2 @@
 # Java
-Java °øºÎ1
+Java ê³µë¶€ utf-8
