@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class Calculator {
 			
-	private void add(int a, int b){
+	private void printAdd(int a, int b){
 		System.out.println(a+b);
 	}
 	
-	private void minus(int a, int b){
+	private void printMinus(int a, int b){
 		System.out.println(a-b);
 	}
 	
-	private void multi(int a, int b){
+	private void printMulti(int a, int b){
 		System.out.println(a*b);
 	}
 	
-	private void inputCalculate(){
+	public void play(){
 		Scanner s = new Scanner(System.in);
 		
 		System.out.println("계산기입니다. 원하시는 연산을 선택하세요.");
@@ -29,18 +29,13 @@ public class Calculator {
 		int b = s.nextInt();
 		
 		if(inputOperator == 1){
-			add(a,b);
+			printAdd(a,b);
 		} else if(inputOperator == 2){
-			minus(a,b);
+			printMinus(a,b);
 		} else if(inputOperator == 3){
-			multi(a,b);
+			printMulti(a,b);
 		} else {
 			System.out.println("잘못 입력하셨습니다.");
 		}		
-		
-	}
-	
-	public void play(){
-		inputCalculate();
 	}
 }
