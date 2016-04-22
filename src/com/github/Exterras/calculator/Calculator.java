@@ -6,9 +6,6 @@ public class Calculator {
 	
 	private boolean exitFlag = true;
 	
-	public Calculator(){
-	}
-	
 	private void printAdd(int a, int b) {
 		System.out.println(a + b);
 	}
