@@ -17,6 +17,10 @@ public class Calculator {
 	private void printMulti(int a, int b) {
 		System.out.println(a * b);
 	}
+	
+	private void setExitFlag(boolean exitFlag) {
+		this.exitFlag = exitFlag;
+	}
 
 	public void play() {
 		Scanner s = new Scanner(System.in);
@@ -49,9 +53,5 @@ public class Calculator {
 
 	public boolean isExitFlag() {
 		return exitFlag;
-	}
-
-	public void setExitFlag(boolean exitFlag) {
-		this.exitFlag = exitFlag;
 	}
 }
