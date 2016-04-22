@@ -3,27 +3,20 @@ package com.github.Exterras.calculator;
 import java.util.Scanner;
 
 public class Calculator {
-	
-	private int a;
-	private int b;
-	
-	public Calculator(){
-		
-	}
 			
-	void add(int a, int b){
+	private void add(int a, int b){
 		System.out.println(a+b);
 	}
 	
-	void minus(int a, int b){
+	private void minus(int a, int b){
 		System.out.println(a-b);
 	}
 	
-	void multi(int a, int b){
+	private void multi(int a, int b){
 		System.out.println(a*b);
 	}
 	
-	void ready(){
+	private void inputCalculate(){
 		Scanner s = new Scanner(System.in);
 		
 		System.out.println("계산기입니다. 원하시는 연산을 선택하세요.");
@@ -32,8 +25,8 @@ public class Calculator {
 		int inputOperator = s.nextInt();
 		
 		System.out.println("계산을 할 두 수를 입력하세요.");
-		a = s.nextInt();
-		b = s.nextInt();
+		int a = s.nextInt();
+		int b = s.nextInt();
 		
 		if(inputOperator == 1){
 			add(a,b);
@@ -47,7 +40,7 @@ public class Calculator {
 		
 	}
 	
-	void play(){
-		ready();
+	public void play(){
+		inputCalculate();
 	}
 }
