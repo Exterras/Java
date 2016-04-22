@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Calculator {
 	
-	private boolean exitFlag = true;
+	private boolean isExit = true;
 	
 	private void printAdd(int a, int b) {
 		System.out.println(a + b);
@@ -18,8 +18,12 @@ public class Calculator {
 		System.out.println(a * b);
 	}
 	
-	private void setExitFlag(boolean exitFlag) {
-		this.exitFlag = exitFlag;
+	private void setExit(boolean isExit) {
+		this.isExit = isExit;
+	}
+	
+	public boolean isExit() {
+		return isExit;
 	}
 
 	public void play() {
@@ -32,7 +36,7 @@ public class Calculator {
 		
 		if (inputOperator == 4) {
 			System.out.println("계산기를 종료합니다.");
-			setExitFlag(false);
+			setExit(false);
 			return;
 		}
 
@@ -49,9 +53,5 @@ public class Calculator {
 		} else {
 			System.out.println("잘못 입력하셨습니다.");
 		}
-	}
-
-	public boolean isExitFlag() {
-		return exitFlag;
 	}
 }
