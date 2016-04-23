@@ -18,15 +18,15 @@ public class Calculator {
 		System.out.println(a * b);
 	}
 	
+	public boolean isExit() {
+		return isExit;
+	}
+	
 	private void setExit(boolean isExit) {
 		this.isExit = isExit;
 	}
 	
-	public boolean isExit() {
-		return isExit;
-	}
-
-	public void play() {
+	public boolean play() {
 		Scanner s = new Scanner(System.in);
 
 		System.out.println("계산기입니다. 원하시는 연산을 선택하세요.");
@@ -36,10 +36,13 @@ public class Calculator {
 		
 		if (inputOperator == 4) {
 			System.out.println("계산기를 종료합니다.");
-			setExit(false);
-			return;
+			setExit(false); 
+			/* field isExit = false; -> CalculatorDo while else -> break;
+			-> CalculatorDo All Completed -> terminated */
+			return false;
+			// public boolean play() return false -> terminated.
 		}
-
+		
 		System.out.println("계산을 할 두 수를 입력하세요.");
 		int a = s.nextInt();
 		int b = s.nextInt();
@@ -53,5 +56,7 @@ public class Calculator {
 		} else {
 			System.out.println("잘못 입력하셨습니다.");
 		}
+		return false;
 	}
+	// All Method Completed. -> Calculator terminated. 
 }

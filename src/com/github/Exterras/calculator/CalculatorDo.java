@@ -7,8 +7,8 @@ public class CalculatorDo {
 			if(cal.isExit()){
 				cal.play();
 			} else {
-				return;	
+				break;	
 			}
 		}
-	}
+	} 
 }
