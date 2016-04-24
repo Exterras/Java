@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class Calculator {
 	
 	private boolean isExit = true;
+	private int inputNum1;
+	private int inputNum2;
+	private Scanner s;
+	private int inputOperator;
 	
 	private void printAdd(int a, int b) {
 		System.out.println(a + b);
@@ -26,13 +30,25 @@ public class Calculator {
 		this.isExit = isExit;
 	}
 	
+	private void inputOperMassage(){
+		if (inputOperator == 1) {
+			System.out.println("덧셈을 할 두 수를 입력하세요.");
+		} else if (inputOperator == 2) {
+			System.out.println("뺄셈을 할 두 수를 입력하세요.");
+		} else if (inputOperator == 3) {
+			System.out.println("곱셈을 할 두 수를 입력하세요.");
+		} else {
+			System.out.println("잘못 입력하셨습니다.");
+		}
+	}
+	
 	public boolean play() {
-		Scanner s = new Scanner(System.in);
+		s = new Scanner(System.in);
 
 		System.out.println("계산기입니다. 원하시는 연산을 선택하세요.");
 		System.out.println("1. 덧셈" + "\t" + "2. 뺄셈" + "\t" + "3. 곱셈" + "\t" + "4. 종료");
 
-		int inputOperator = s.nextInt();
+		inputOperator = s.nextInt();
 		
 		if (inputOperator == 4) {
 			System.out.println("계산기를 종료합니다.");
@@ -43,16 +59,17 @@ public class Calculator {
 			// public boolean play() return false -> terminated.
 		}
 		
-		System.out.println("계산을 할 두 수를 입력하세요.");
-		int a = s.nextInt();
-		int b = s.nextInt();
-
+		inputOperMassage();
+		
+		inputNum1 = s.nextInt();
+		inputNum2 = s.nextInt();
+		
 		if (inputOperator == 1) {
-			printAdd(a, b);
+			printAdd(inputNum1, inputNum2);
 		} else if (inputOperator == 2) {
-			printMinus(a, b);
+			printMinus(inputNum1, inputNum2);
 		} else if (inputOperator == 3) {
-			printMulti(a, b);
+			printMulti(inputNum1, inputNum2);
 		} else {
 			System.out.println("잘못 입력하셨습니다.");
 		}
