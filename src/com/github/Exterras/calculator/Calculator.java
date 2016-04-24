@@ -5,9 +5,6 @@ import java.util.Scanner;
 public class Calculator {
 	
 	private boolean isExit = true;
-	private int inputNum1;
-	private int inputNum2;
-	private Scanner s;
 	private int inputOperator;
 	
 	private void printAdd(int a, int b) {
@@ -43,7 +40,7 @@ public class Calculator {
 	}
 	
 	public boolean play() {
-		s = new Scanner(System.in);
+		Scanner s = new Scanner(System.in);
 
 		System.out.println("계산기입니다. 원하시는 연산을 선택하세요.");
 		System.out.println("1. 덧셈" + "\t" + "2. 뺄셈" + "\t" + "3. 곱셈" + "\t" + "4. 종료");
@@ -61,8 +58,8 @@ public class Calculator {
 		
 		inputOperMassage();
 		
-		inputNum1 = s.nextInt();
-		inputNum2 = s.nextInt();
+		int inputNum1 = s.nextInt();
+		int inputNum2 = s.nextInt();
 		
 		if (inputOperator == 1) {
 			printAdd(inputNum1, inputNum2);
